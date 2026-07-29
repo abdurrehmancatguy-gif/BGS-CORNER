@@ -69,11 +69,17 @@
   var ctx = canvas.getContext('2d', { alpha: false });
   var lastDrawn = -1;
 
+  /* Returns true when the backing store actually changed, so callers can skip
+     a redundant redraw. */
   function sizeCanvas() {
     var dpr = Math.min(window.devicePixelRatio || 1, 2);
-    canvas.width = Math.round((canvas.clientWidth || window.innerWidth) * dpr);
-    canvas.height = Math.round((canvas.clientHeight || window.innerHeight) * dpr);
+    var w = Math.round((canvas.clientWidth || window.innerWidth) * dpr);
+    var h = Math.round((canvas.clientHeight || window.innerHeight) * dpr);
+    if (!w || !h || (w === canvas.width && h === canvas.height)) return false;
+    canvas.width = w;
+    canvas.height = h;
     lastDrawn = -1;
+    return true;
   }
 
   function nearestLoaded(target) {
@@ -205,13 +211,20 @@
   });
 
   var resizeTimer;
-  window.addEventListener('resize', function () {
+  function handleResize() {
     clearTimeout(resizeTimer);
     resizeTimer = setTimeout(function () {
-      sizeCanvas();
-      paint(currentP);
+      if (sizeCanvas()) paint(currentP);
     }, 120);
-  });
+  }
+  window.addEventListener('resize', handleResize);
+
+  /* A window resize event is not guaranteed — a page opened in a background
+     tab can lay out at zero height and gain its real size without one, which
+     would leave the canvas blank. Watch the element itself. */
+  if (window.ResizeObserver) {
+    new ResizeObserver(handleResize).observe(canvas);
+  }
 
   /* ======================================================================
      5. STILLS PULLED FROM THE SAME SEQUENCE
