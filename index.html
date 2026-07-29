@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>BGS CORNER — Rare Perfumery</title>
+<meta name="description" content="BGS CORNER — a house of rare perfumery. Crystal-cut flacons, extrait de parfum, composed in small batches." />
+<meta name="theme-color" content="#0A0806" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+<!-- ============ PRELOADER ============ -->
+<div class="loader" id="loader">
+  <div class="loader__inner">
+    <div class="loader__mark">BGS<span>CORNER</span></div>
+    <div class="loader__bar"><i id="loaderBar"></i></div>
+    <div class="loader__pct" id="loaderPct">0</div>
+  </div>
+</div>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <a class="nav__brand" href="#top">BGS <span>CORNER</span></a>
+  <nav class="nav__links">
+    <a href="#collection">Collection</a>
+    <a href="#notes">Composition</a>
+    <a href="#atelier">Atelier</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <button class="nav__burger" id="burger" aria-label="Menu"><span></span><span></span></button>
+</header>
+
+<div class="menu" id="menu">
+  <a href="#collection">Collection</a>
+  <a href="#notes">Composition</a>
+  <a href="#atelier">Atelier</a>
+  <a href="#contact">Contact</a>
+</div>
+
+<main id="top">
+
+  <!-- ============ HERO — SCROLL SEQUENCE ============ -->
+  <section class="hero" id="hero">
+    <div class="hero__sticky">
+      <canvas id="sequence" class="hero__canvas"></canvas>
+      <div class="hero__vignette"></div>
+      <div class="grain"></div>
+
+      <div class="hero__ui">
+        <!-- 01 · macro, stopper lifting -->
+        <div class="cap cap--center" data-cap="0">
+          <p class="cap__eyebrow">Est. Dubai — Rare Perfumery</p>
+          <h1 class="cap__title">BGS<span>CORNER</span></h1>
+          <p class="cap__sub">Extrait de Parfum · Crystal Edition</p>
+        </div>
+
+        <!-- 02 · the flacon with the raw materials shown at frame-left -->
+        <div class="cap cap--mid" data-cap="1">
+          <h2 class="cap__h">Four materials.<br />One accord.</h2>
+          <p class="cap__p">Sourced by hand, then left to marry six months before a bottle is filled.</p>
+        </div>
+
+        <!-- 03 · the boutique counter -->
+        <div class="cap cap--bottom" data-cap="2">
+          <h2 class="cap__h">Find the corner.</h2>
+          <p class="cap__p">A small room of black and gold in the marble halls of Dubai — where every flacon is opened before you choose.</p>
+        </div>
+
+        <!-- 04 · back to the flacon -->
+        <div class="cap cap--mid" data-cap="3">
+          <h2 class="cap__h">Sealed by hand.</h2>
+          <p class="cap__p">Sixty-two facets, ground until the stopper seats without adhesive.</p>
+        </div>
+
+        <!-- 05 · macro again, the invitation -->
+        <div class="cap cap--center" data-cap="4">
+          <h2 class="cap__h">Yours to open.</h2>
+          <a class="btn" href="#collection">Discover the Collection</a>
+        </div>
+      </div>
+
+      <div class="scrollcue" id="scrollcue">
+        <span>Scroll</span>
+        <i></i>
+      </div>
+
+      <div class="hero__meta">
+        <span id="frameMeta">01 / 05</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ MARQUEE ============ -->
+  <div class="marquee">
+    <div class="marquee__track">
+      <span>Extrait de Parfum</span><i>◆</i><span>Hand-Cut Crystal</span><i>◆</i><span>Small Batch</span><i>◆</i><span>Aged Ambergris</span><i>◆</i>
+      <span>Extrait de Parfum</span><i>◆</i><span>Hand-Cut Crystal</span><i>◆</i><span>Small Batch</span><i>◆</i><span>Aged Ambergris</span><i>◆</i>
+    </div>
+  </div>
+
+  <!-- ============ COLLECTION ============ -->
+  <section class="section collection" id="collection">
+    <div class="wrap">
+      <header class="shead reveal">
+        <p class="shead__eyebrow">01 — The Collection</p>
+        <h2 class="shead__title">Four expressions,<br />one signature.</h2>
+      </header>
+
+      <div class="cards">
+        <article class="card reveal">
+          <div class="card__img" data-frame="140" data-pos="64%"></div>
+          <div class="card__body">
+            <p class="card__no">N° 01</p>
+            <h3>Nuit d'Or</h3>
+            <p class="card__desc">Saffron, Turkish rose, and a long amber drydown. Worn after dark.</p>
+            <p class="card__price">AED 1,450 · 50ml</p>
+          </div>
+        </article>
+
+        <article class="card reveal">
+          <div class="card__img" data-frame="60"></div>
+          <div class="card__body">
+            <p class="card__no">N° 02</p>
+            <h3>Cristal Bleu</h3>
+            <p class="card__desc">Bergamot over cold iris and salted musk. Clean, quiet, exacting.</p>
+            <p class="card__price">AED 1,680 · 50ml</p>
+          </div>
+        </article>
+
+        <article class="card reveal">
+          <div class="card__img" data-frame="118"></div>
+          <div class="card__body">
+            <p class="card__no">N° 03</p>
+            <h3>Oud Sacré</h3>
+            <p class="card__desc">Assam oud, smoked cedar, a thread of incense. The house signature.</p>
+            <p class="card__price">AED 2,200 · 50ml</p>
+          </div>
+        </article>
+
+        <article class="card reveal">
+          <div class="card__img" data-frame="10"></div>
+          <div class="card__body">
+            <p class="card__no">N° 04</p>
+            <h3>Ambre Onze</h3>
+            <p class="card__desc">Ambergris aged eleven years, vanilla absolute, tonka. Skin-close.</p>
+            <p class="card__price">AED 2,850 · 50ml</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ NOTES ============ -->
+  <section class="section notes" id="notes">
+    <div class="wrap">
+      <header class="shead reveal">
+        <p class="shead__eyebrow">02 — Composition</p>
+        <h2 class="shead__title">The architecture<br />of a scent.</h2>
+      </header>
+
+      <div class="pyramid">
+        <div class="pyr reveal">
+          <p class="pyr__label">Top</p>
+          <h3 class="pyr__title">First Breath</h3>
+          <ul>
+            <li>Calabrian Bergamot</li>
+            <li>Pink Pepper</li>
+            <li>Saffron Threads</li>
+          </ul>
+          <p class="pyr__time">0 — 20 min</p>
+        </div>
+        <div class="pyr reveal">
+          <p class="pyr__label">Heart</p>
+          <h3 class="pyr__title">The Body</h3>
+          <ul>
+            <li>Rose de Mai</li>
+            <li>Florentine Iris</li>
+            <li>Jasmine Sambac</li>
+          </ul>
+          <p class="pyr__time">20 min — 3 hrs</p>
+        </div>
+        <div class="pyr reveal">
+          <p class="pyr__label">Base</p>
+          <h3 class="pyr__title">What Remains</h3>
+          <ul>
+            <li>Assam Oud</li>
+            <li>Aged Ambergris</li>
+            <li>Vanilla Absolute</li>
+          </ul>
+          <p class="pyr__time">3 — 14 hrs</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ATELIER ============ -->
+  <section class="section atelier" id="atelier">
+    <div class="wrap atelier__grid">
+      <div class="atelier__visual reveal">
+        <div class="atelier__img" data-frame="170"></div>
+      </div>
+      <div class="atelier__copy reveal">
+        <p class="shead__eyebrow">03 — The Atelier</p>
+        <h2 class="shead__title">Eleven years<br />in a single drop.</h2>
+        <p>Every BGS CORNER flacon begins as raw lead crystal, cut by hand over four days. The stopper is faceted separately — sixty-two facets, ground until the seal is airtight without adhesive.</p>
+        <p>Inside, a maceration of no fewer than six months. We release two hundred and forty bottles a year. When they are gone, they are gone.</p>
+        <div class="stats">
+          <div><strong>240</strong><span>bottles / year</span></div>
+          <div><strong>62</strong><span>hand-cut facets</span></div>
+          <div><strong>6</strong><span>months maceration</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ QUOTE ============ -->
+  <section class="quote">
+    <div class="quote__bg" data-frame="88"></div>
+    <div class="wrap">
+      <p class="reveal">“A perfume should not announce you.<br />It should make the room wonder.”</p>
+      <span class="reveal">— House Maxim, BGS CORNER</span>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="section contact" id="contact">
+    <div class="wrap">
+      <div class="contact__inner reveal">
+        <p class="shead__eyebrow">04 — Private List</p>
+        <h2 class="shead__title">Be told first.</h2>
+        <p class="contact__p">Releases are announced to the private list before anywhere else. No more than four letters a year.</p>
+        <form class="form" id="form">
+          <input type="email" placeholder="your@email.com" required aria-label="Email address" />
+          <button type="submit">Request Access</button>
+        </form>
+        <p class="form__note" id="formNote"></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="wrap footer__grid">
+      <div>
+        <div class="footer__brand">BGS <span>CORNER</span></div>
+        <p>Rare perfumery, composed in small batches.</p>
+      </div>
+      <div>
+        <h4>House</h4>
+        <a href="#collection">Collection</a>
+        <a href="#notes">Composition</a>
+        <a href="#atelier">Atelier</a>
+      </div>
+      <div>
+        <h4>Client</h4>
+        <a href="#contact">Private List</a>
+        <a href="#contact">Shipping</a>
+        <a href="#contact">Care</a>
+      </div>
+      <div>
+        <h4>Elsewhere</h4>
+        <a href="#top">Instagram</a>
+        <a href="#top">Journal</a>
+        <a href="#top">Stockists</a>
+      </div>
+    </div>
+    <div class="wrap footer__base">
+      <span>© <span id="year"></span> BGS CORNER. All rights reserved.</span>
+      <span>Dubai · Paris · Tokyo</span>
+    </div>
+  </footer>
+
+</main>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
